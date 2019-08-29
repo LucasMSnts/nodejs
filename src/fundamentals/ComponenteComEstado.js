@@ -11,6 +11,16 @@ class ComponenteComEstado extends React.Component {
         };
     }
 
+    componentDidMount() {
+        // chamadas de API/endpoints eh aqui e atualiza o estado
+        console.log('--- passou no componentDidMount ---')
+        setTimeout(() => {
+            this.setState({
+                infoText: 'TESTE MOUNT'
+            })
+        }, 2000)
+    }
+
     abrir =() => {
         this.setState({height: 200, infoText: "Componente Aberto" });
     }
@@ -29,12 +39,17 @@ class ComponenteComEstado extends React.Component {
             height: this.state.height, 
             padding: 10,
             color: "black",
-            backgroundColor: "lightGray"
+            backgroundColor: "lightGray",
+            overflow: "hidden"
         };
 
        return( 
             <div style={{ padding: 10 }}>
-            <div style={objetoStilo}>{this.state.infoText}</div>
+            <p>{this.props.text}</p>
+            <div style={objetoStilo}>
+                {this.state.infoText}
+            </div>              
+            
                 <button type="button" onClick={this.abrir}>
                     Abrir
                 </button>           
