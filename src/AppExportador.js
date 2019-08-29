@@ -3,8 +3,12 @@ import logo from './logo.svg';
 import ComponenteControlado from './fundamentals/ComponenteControlado'
 import './App.css';
 
-import ComponenteComHooks from './fundamentals/ComponenteComHooks';
-
+import ComponenteComFuncao from './fundamentals/ComponenteComEstado';
+import {
+    default as CompAmigo,  
+    Comp1 as Comp123, 
+    Comp2 
+  } from './fundamentals/ComponenteExportador'
 
 function App() {
 
@@ -12,7 +16,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-          <ComponenteComHooks />
+          <ComponenteControlado />
+          <Comp123 />
+          <CompAmigo />
       </header>
     </div>
   );

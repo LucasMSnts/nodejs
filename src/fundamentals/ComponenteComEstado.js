@@ -21,7 +21,19 @@ class ComponenteComEstado extends React.Component {
         }, 2000)
     }
 
+    // Isso aqui é consequencia da mudança de estado ou de props
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps !== this.props) {
+            this.fechar("fechou");
+        }
+    }
+
+    componentWillUnmount() {
+        console.log("--- Passou no componentWillUnmount ---")
+    }
+
     abrir =() => {
+        //a causa
         this.setState({height: 200, infoText: "Componente Aberto" });
     }
 
