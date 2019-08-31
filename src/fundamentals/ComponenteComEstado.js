@@ -34,6 +34,7 @@ class ComponenteComEstado extends React.Component {
 
     abrir =() => {
         //a causa
+        // O setState SEMPRE chama o render novamente
         this.setState({height: 200, infoText: "Componente Aberto" });
     }
 
@@ -42,6 +43,7 @@ class ComponenteComEstado extends React.Component {
     // }
 
     fechar = texto => {
+        // O setState SEMPRE chama o render novamente
         this.setState({height: 35, infoText: texto });
     }
     
