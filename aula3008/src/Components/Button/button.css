@@ -1,0 +1,25 @@
+.btn {
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    flex: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 10px;
+    background-color: white;
+    border: none;
+  }
+  
+  .btn-primary {
+    background-color: #e72f85;
+    color: white;
+  }
+  
+  .btn-secondary {
+    border: 1px solid #e72f85;
+    color: #e72f85;
+  }
+  
+  .btn:last-child {
+    margin-right: 0;
+  }

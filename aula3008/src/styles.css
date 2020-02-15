@@ -1,0 +1,14 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  body {
+    margin: 0px;
+    font-family: "Open Sans";
+    background-color: #fffcf2;
+  }
+
+  a {
+    text-decoration: none;
+  }
